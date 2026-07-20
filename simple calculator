@@ -1,0 +1,21 @@
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+c = input("Choose operation (addition, subtraction, multiplication, division): ")
+
+if c == "addition":
+    print("Result:", a + b)
+
+elif c == "subtraction":
+    print("Result:", a - b)
+
+elif c == "multiplication":
+    print("Result:", a * b)
+
+elif c == "division":
+    if b != 0:
+        print("Result:", a / b)
+    else:
+        print("Error! Cannot divide by zero.")
+
+else:
+    print("Invalid operation.")
