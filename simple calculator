@@ -1,21 +1,30 @@
-a = int(input("Enter first number: "))
-b = int(input("Enter second number: "))
-c = input("Choose operation (addition, subtraction, multiplication, division): ")
+while True:
 
-if c == "addition":
-    print("Result:", a + b)
+    a = int(input("Enter first number: "))
+    b = int(input("Enter second number: "))
 
-elif c == "subtraction":
-    print("Result:", a - b)
+    c = input("Choose operation (addition, subtraction, multiplication, division): ")
 
-elif c == "multiplication":
-    print("Result:", a * b)
+    if c == "addition":
+        print("Result:", a + b)
 
-elif c == "division":
-    if b != 0:
-        print("Result:", a / b)
+    elif c == "subtraction":
+        print("Result:", a - b)
+
+    elif c == "multiplication":
+        print("Result:", a * b)
+
+    elif c == "division":
+        if b != 0:
+            print("Result:", a / b)
+        else:
+            print("Error! Cannot divide by zero.")
+
     else:
-        print("Error! Cannot divide by zero.")
+        print("Invalid operation.")
 
-else:
-    print("Invalid operation.")
+    choice = input("Do you want to perform another calculation? (yes/no): ")
+
+    if choice.lower() != "yes":
+        print("Thank you for using the calculator!")
+        break
